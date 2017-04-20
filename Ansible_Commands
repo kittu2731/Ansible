@@ -1,0 +1,11 @@
+ansible apacheweb -s -m shell -a "yum install -y telnet"
+ansible apacheweb -s -m shell -a "ps -ef|grep java"
+ansible apacheweb -m setup
+ansible apacheweb -m setup -a 'filter="ansible_system_vendor"'
+anisble apacheweb -s -m yum -a 'yum install -y lynx'
+ansible redhat -m ping
+ansible local -m setup --tree /tmp/facts
+ansible apacheweb -s -m shell -a 'tail -100 /var/log/messages'
+ansible all --list-hosts
+ansible webgroup -i hosts -m ping
+ansible local -m setup -a 'filter=distribution'
