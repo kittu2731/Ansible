@@ -1,0 +1,5 @@
+- hosts: apacheweb
+  tasks:
+  - name: "Installation of telnet"
+    yum: pkg=telnet state=installed update_cache=true
+    

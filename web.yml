@@ -1,0 +1,4 @@
+- hosts: redhat
+  tasks:
+  - name: "Node Health Check"
+    ping: 
