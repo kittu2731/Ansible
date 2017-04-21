@@ -1,4 +1,9 @@
 - hosts: appserver
+  vars:
+    author_name: Krishna
+  vars_files:
+    - vars.yml
+    
   tasks:
    - name: Install Lynx on App Server
      yum: pkg=lynx state=installed update_cache=true
